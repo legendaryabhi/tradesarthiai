@@ -437,7 +437,7 @@ Error generating stack: `+e.message+`
              font-size: var(--font-size-5xl);
           }
         }
-      `})]})},n1=()=>f.jsxs("section",{className:"section",children:[f.jsxs("div",{className:"container",children:[f.jsx("h2",{className:"section-title",children:"Simple Steps to Start Selling"}),f.jsx("p",{className:"section-subtitle",children:"You don’t need to be technical. If you can use WhatsApp, you can use Tradesarthi."}),f.jsxs("div",{className:"steps-wrapper",children:[f.jsxs("div",{className:"step-card",children:[f.jsx("div",{className:"step-badge",children:"1"}),f.jsx("h3",{children:"Create Your Tradesarthi Account"}),f.jsx("p",{children:"Sign up in 1 minute and tell us about your shop."})]}),f.jsx("div",{className:"connector"}),f.jsxs("div",{className:"step-card",children:[f.jsx("div",{className:"step-badge",children:"2"}),f.jsx("h3",{children:"Connect Your WhatsApp Business"}),f.jsx("p",{children:"Link your WhatsApp number to Tradesarthi."})]}),f.jsx("div",{className:"connector"}),f.jsxs("div",{className:"step-card",children:[f.jsx("div",{className:"step-badge",children:"3"}),f.jsx("h3",{children:"Let AI Handle the Sales"}),f.jsxs("div",{className:"flow-line",children:[f.jsx("span",{children:"Reply "}),f.jsx("span",{className:"dot",children:"•"}),f.jsx("span",{children:" Show "}),f.jsx("span",{className:"dot",children:"•"}),f.jsx("span",{children:" Negotiate "}),f.jsx("span",{className:"dot",children:"•"}),f.jsx("span",{children:" Collect Payment "}),f.jsx("span",{className:"dot",children:"•"}),f.jsx("span",{children:" Confirm "})]}),f.jsx("p",{children:"You just get notified when the order is confirmed."})]})]})]}),f.jsx("style",{jsx:!0,children:`
+      `})]})},n1=()=>f.jsxs("section",{className:"section",children:[f.jsxs("div",{className:"container",children:[f.jsx("h2",{className:"section-title",children:"Simple Steps to Start Selling"}),f.jsx("p",{className:"section-subtitle",children:"You don’t need to be technical. If you can use WhatsApp, you can use Tradesarthi."}),f.jsxs("div",{className:"steps-wrapper",children:[f.jsxs("div",{className:"step-card",children:[f.jsx("div",{className:"step-badge",children:"1"}),f.jsx("h3",{children:"Create Your Tradesarthi Account"}),f.jsx("p",{children:"Sign up in 1 minute and tell us about your shop."})]}),f.jsx("div",{className:"connector"}),f.jsxs("div",{className:"step-card",children:[f.jsx("div",{className:"step-badge",children:"2"}),f.jsx("h3",{children:"Connect Your WhatsApp Business"}),f.jsx("p",{children:"Link your WhatsApp number to Tradesarthi."})]}),f.jsx("div",{className:"connector"}),f.jsxs("div",{className:"step-card",children:[f.jsx("div",{className:"step-badge",children:"3"}),f.jsx("h3",{children:"Let AI Handle the Sales"}),f.jsxs("div",{className:"flow-line",children:[f.jsx("span",{children:"Reply "}),f.jsx("span",{className:"dot",children:"•"}),f.jsx("span",{children:" Show "}),f.jsx("span",{className:"dot",children:"•"}),f.jsx("span",{children:" Negotiate "}),f.jsx("span",{className:"dot",children:"•"}),f.jsx("span",{children:" Collect Payment "}),f.jsx("span",{className:"dot",children:"•"}),f.jsx("span",{children:" Confirm "})]})]})]})]}),f.jsx("style",{jsx:!0,children:`
                 .steps-wrapper {
                     display: flex;
                     flex-direction: column;
@@ -488,21 +488,7 @@ Error generating stack: `+e.message+`
                     background: var(--color-border);
                 }
 
-                .flow-line {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 8px;
-                    margin: var(--spacing-sm) 0;
-                    padding: 8px 12px;
-                    background: var(--color-surface);
-                    border-radius: var(--radius-md);
-                    font-size: var(--font-size-xs);
-                    font-weight: var(--font-weight-bold);
-                    color: var(--color-primary-dark);
-                }
-
+                
                 .dot {
                     color: var(--color-primary);
                     font-size: 1.2rem;
