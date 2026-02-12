@@ -1,0 +1,4 @@
+/* Cleaned App.css to avoid interference with global and component styles */
+#root {
+  width: 100%;
+}
