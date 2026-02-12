@@ -40,7 +40,7 @@ const HowItWorks = () => {
     <span> Confirm </span>
   </div>
 
-  <p>You just get notified when the order is confirmed.</p>
+
 </div>
 
                 </div>
@@ -96,21 +96,7 @@ const HowItWorks = () => {
                     background: var(--color-border);
                 }
 
-                .flow-line {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 8px;
-                    margin: var(--spacing-sm) 0;
-                    padding: 8px 12px;
-                    background: var(--color-surface);
-                    border-radius: var(--radius-md);
-                    font-size: var(--font-size-xs);
-                    font-weight: var(--font-weight-bold);
-                    color: var(--color-primary-dark);
-                }
-
+                
                 .dot {
                     color: var(--color-primary);
                     font-size: 1.2rem;

@@ -1,5 +1,8 @@
 import React from 'react';
-import { MessageCircle, CheckCircle, ShieldCheck, PlayCircle, ArrowRight } from 'lucide-react';
+import { 
+    MessageCircle, CheckCircle, ShieldCheck, PlayCircle, ArrowRight,
+    ArrowLeft, Phone, Video, MoreVertical, Smile, Paperclip, Camera, Mic, Send
+} from 'lucide-react';
 
 const Hero = () => {
     const scrollToSection = (id) => {
@@ -29,12 +32,45 @@ const Hero = () => {
         </div>
         <div className="hero-image-wrapper">
            <div className="phone-mockup">
+              {/* WhatsApp Header Mockup */}
+              <div className="chat-header">
+                  <div className="header-left">
+                      <ArrowLeft size={20} />
+                      <div className="profile-pic">
+                          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul" alt="Rahul" />
+                      </div>
+                      <div className="user-info">
+                          <span className="user-name">Rahul</span>
+                          <span className="user-status">online</span>
+                      </div>
+                  </div>
+                  <div className="header-icons">
+                      <Video size={18} />
+                      <Phone size={18} />
+                      <MoreVertical size={18} />
+                  </div>
+              </div>
+
               <div className="screen">
-                 {/* Imagine a chat interface here */}
                  <div className="msg msg-left">Red saree dikhao?</div>
                  <div className="msg msg-right">Sure ma'am! Ye dekhiye latest Banarasi silk collection. Only ₹1200 today.</div>
                  <div className="msg msg-left">Thoda discount?</div>
                  <div className="msg msg-right">Okay, last ₹1100. Deal pakki?</div>
+              </div>
+
+              {/* WhatsApp Input Mockup */}
+              <div className="chat-input-bar">
+                  <div className="input-field">
+                      <Smile size={20} color="#8696a0" />
+                      <span className="placeholder">Message</span>
+                      <div className="input-right-icons">
+                          <Paperclip size={20} color="#8696a0" className="rotate-45" />
+                          <Camera size={20} color="#8696a0" />
+                      </div>
+                  </div>
+                  <div className="voice-btn">
+                      <Mic size={20} color="#fff" />
+                  </div>
               </div>
            </div>
            <div className="blob"></div>
@@ -71,7 +107,7 @@ const Hero = () => {
 
         .hero-title {
           font-family: var(--font-family-heading);
-          font-size: var(--font-size-4xl); /* Reduced from previous logic slightly via var change */
+          font-size: var(--font-size-4xl);
           font-weight: var(--font-weight-extrabold);
           margin-bottom: var(--spacing-md);
           line-height: 1.1;
@@ -91,7 +127,7 @@ const Hero = () => {
             left: 0;
             width: 100%;
             height: 10px;
-            background: #b2dfdb; /* Light translucent teal */
+            background: #b2dfdb;
             z-index: -1;
             opacity: 0.6;
         }
@@ -137,41 +173,86 @@ const Hero = () => {
             gap: 8px;
         }
         
-        .btn-text {
-            color: var(--color-text);
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-        
-        .btn-text:hover {
-            text-decoration: underline;
-            color: var(--color-primary);
-        }
-        
         /* Phone Mockup Styling */
         .hero-image-wrapper {
             position: relative;
             width: 100%;
-            max-width: 300px; /* Slightly narrower for realism */
+            max-width: 300px;
             margin: 0 auto;
         }
         
         .phone-mockup {
             background: #fff;
-            border: 12px solid #2d3748; /* Dark bezel */
+            border: 12px solid #2d3748;
             border-radius: 40px;
-            overflow: hidden; /* Clips content to rounded corners */
+            overflow: hidden;
             position: relative;
             z-index: 2;
-            background: #dcf8c6; /* WhatsApp bg */
+            background: #efe7de; /* Real WhatsApp background color */
+            background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); /* WhatsApp pattern */
             min-height: 550px;
             box-shadow: 
-                0 0 0 2px #4a5568, /* Outer metallic rim */
-                var(--shadow-xl); /* Deep drop shadow */
+                0 0 0 2px #4a5568,
+                var(--shadow-xl);
+            display: flex;
+            flex-direction: column;
         }
         
-        /* The Notch */
+        .chat-header {
+            background: #075e54;
+            color: white;
+            padding: 35px 12px 10px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .profile-pic {
+            width: 32px;
+            height: 32px;
+            background: #ccc;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 4px;
+        }
+
+        .user-name {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .user-status {
+            font-size: 10px;
+            opacity: 0.8;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 12px;
+            opacity: 0.9;
+        }
+        
+        /* Notch adjustment */
         .phone-mockup::before {
             content: '';
             position: absolute;
@@ -183,35 +264,23 @@ const Hero = () => {
             background: #2d3748;
             border-bottom-left-radius: 12px;
             border-bottom-right-radius: 12px;
-            z-index: 10;
-        }
-        
-        /* Side placement for buttons (optional but cool) */
-        .phone-mockup::after {
-            content: '';
-            position: absolute;
-            top: 100px;
-            right: -14px;
-            width: 4px;
-            height: 40px;
-            background: #4a5568;
-            border-top-right-radius: 2px;
-            border-bottom-right-radius: 2px;
+            z-index: 11;
         }
         
         .screen {
+            flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            padding: 40px 10px 20px 10px; /* Top padding clears notch */
-            height: 100%;
+            gap: 12px;
+            padding: 15px 10px;
+            overflow: hidden;
         }
         
         .msg {
-            padding: 10px 15px;
-            border-radius: 15px;
-            font-size: 13px; /* Smaller text inside phone */
-            max-width: 85%;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            max-width: 80%;
             box-shadow: 0 1px 1px rgba(0,0,0,0.1);
             position: relative;
             line-height: 1.4;
@@ -235,7 +304,7 @@ const Hero = () => {
         }
         
         .msg-right {
-            background: #e7ffdb;
+            background: #dcf8c6;
             align-self: flex-end;
             border-top-right-radius: 0;
         }
@@ -247,8 +316,53 @@ const Hero = () => {
             right: -8px;
             width: 0;
             height: 0;
-            border-top: 10px solid #e7ffdb;
+            border-top: 10px solid #dcf8c6;
             border-right: 10px solid transparent;
+        }
+
+        .chat-input-bar {
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+        }
+
+        .input-field {
+            flex: 1;
+            background: white;
+            border-radius: 24px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+
+        .placeholder {
+            flex: 1;
+            color: #8696a0;
+            font-size: 14px;
+        }
+
+        .input-right-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+
+        .voice-btn {
+            width: 40px;
+            height: 40px;
+            background: #00a884;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         }
         
         .blob {
